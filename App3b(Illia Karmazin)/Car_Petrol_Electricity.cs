@@ -54,7 +54,7 @@ namespace App3b_Illia_Karmazin_
         {
             Console.WriteLine(Tank ? "Car already refueled petrol\n" : "Refuels petrol\n");
             Tank = true;
-            Console.WriteLine(Tank ? "Car already refueled electricity\n" : "Refuels electricity\n");
+            Console.WriteLine(Battery ? "Car already refueled electricity\n" : "Refuels electricity\n");
             Battery = true;
         }
     }
