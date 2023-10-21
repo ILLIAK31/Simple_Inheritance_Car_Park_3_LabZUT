@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,16 @@ namespace App3b_Illia_Karmazin_
         public bool Battery { get; set; } = false;
         public void Start()
         {
-            Console.WriteLine(Engine || Electric_Engine ? "The car is already started\n" : "Start the car\n");
+            if (!Engine)
+            {
+                Console.WriteLine("Start the car(Engine)\n");
+            }
+            else if (!Electric_Engine)
+            {
+                Console.WriteLine("Start the car(Electric Engine)\n");
+            }
+            else
+                Console.WriteLine("The car is already started\n");
             Engine = Electric_Engine = true;
         }
         public void Turn_Off()

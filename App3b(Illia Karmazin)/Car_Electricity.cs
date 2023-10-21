@@ -12,7 +12,7 @@ namespace App3b_Illia_Karmazin_
         public bool Battery { get; set; } = false;
         public void Start()
         {
-            Console.WriteLine(Electric_Engine ? "The car is already started\n" : "Start the car\n");
+            Console.WriteLine(Electric_Engine ? "The car is already started\n" : "Start the car(Electric Engine)\n");
             Electric_Engine = true;
         }
         public void Turn_Off()

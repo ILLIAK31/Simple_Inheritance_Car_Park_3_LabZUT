@@ -12,7 +12,7 @@ namespace App3b_Illia_Karmazin_
         public bool Tank { get; set; } = false;
         public void Start()
         {
-            Console.WriteLine(Engine ? "The car is already started\n" : "Start the car\n");
+            Console.WriteLine(Engine ? "The car is already started\n" : "Start car(Engine)\n");
             Engine = true;
         }
         public void Turn_Off()
