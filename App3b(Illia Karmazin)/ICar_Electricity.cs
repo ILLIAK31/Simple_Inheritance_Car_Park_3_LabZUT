@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace App3b_Illia_Karmazin_
 {
-    internal interface ICar_Electricity
+    internal interface ICar_Electricity : ICar
     {
-        void Start();
-        void Turn_Off();
-        void Refuel();
-        void Drive();
         bool Electric_Engine { get; set; }
         bool Battery { get; set; }
     }

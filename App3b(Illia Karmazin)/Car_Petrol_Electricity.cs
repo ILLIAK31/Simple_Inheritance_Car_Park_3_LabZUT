@@ -15,17 +15,15 @@ namespace App3b_Illia_Karmazin_
         public bool Battery { get; set; } = false;
         public void Start()
         {
-            if (!Engine)
+            if (!Engine && !Electric_Engine)
             {
                 Console.WriteLine("Start the car(Engine)\n");
-            }
-            else if (!Electric_Engine)
-            {
+                Engine = true;
                 Console.WriteLine("Start the car(Electric Engine)\n");
+                Electric_Engine = true;
             }
             else
                 Console.WriteLine("The car is already started\n");
-            Engine = Electric_Engine = true;
         }
         public void Turn_Off()
         {

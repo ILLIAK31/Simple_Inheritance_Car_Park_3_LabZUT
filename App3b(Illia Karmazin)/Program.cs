@@ -14,9 +14,8 @@ namespace App3b_Illia_Karmazin_
             car.Start();
             ((ICar)car).Start();
             ((ICar_Electricity)car).Start();
-            // car.Electric_Engine = true;
+            //car.Electric_Engine = true;
             ((ICar_Petrol)car).Start();
-
         }
     }
 }
