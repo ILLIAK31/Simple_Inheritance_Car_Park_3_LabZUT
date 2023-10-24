@@ -25,7 +25,7 @@ namespace App3b_Illia_Karmazin_
             if (Engine)
             {
                 Console.WriteLine(Tank ? "I'm driving on petrol \n" : "None petrol refuel\n");
-                Tank = (Tank) ? false : true;
+                Tank = false;
             }
             else
                 Console.WriteLine("Car is not running\n");

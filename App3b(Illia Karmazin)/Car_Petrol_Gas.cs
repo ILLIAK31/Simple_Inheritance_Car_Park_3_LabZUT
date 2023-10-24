@@ -28,7 +28,7 @@ namespace App3b_Illia_Karmazin_
                 if (Tank)
                 {
                     Console.WriteLine("I'm driving on petrol \n");
-                    Tank = !Tank;
+                    Tank = false ;
                 }
                 else if (Cylinder)
                 {
@@ -44,9 +44,8 @@ namespace App3b_Illia_Karmazin_
         public void Refuel()
         {
             Console.WriteLine(Tank ? "Car already refueled petrol\n" : "Refuels petrol\n");
-            Tank = true;
-            Console.WriteLine(Tank ? "Car already refueled gas\n" : "Refuels gas\n");
-            Cylinder = true;
+            Console.WriteLine(Cylinder ? "Car already refueled gas\n" : "Refuels gas\n");
+            Tank = Cylinder = true;
         }
     }
 }

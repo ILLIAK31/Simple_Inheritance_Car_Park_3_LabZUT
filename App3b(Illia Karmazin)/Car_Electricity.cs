@@ -25,7 +25,7 @@ namespace App3b_Illia_Karmazin_
             if (Electric_Engine)
             {
                 Console.WriteLine(Battery ? "I'm driving on electricity \n" : "None electricity refuel\n");
-                Battery = (Battery) ? false : true;
+                Battery = false;
             }
             else
                 Console.WriteLine("Car is not running\n");

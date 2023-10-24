@@ -26,7 +26,7 @@ namespace App3b_Illia_Karmazin_
             if (Engine)
             {
                 Console.WriteLine(Cylinder ? "I'm driving on gas \n" : "None gas refuel\n");
-                Cylinder = (Cylinder) ? false : true;
+                Cylinder = false;
             }
             else
                 Console.WriteLine("Car is not running\n");

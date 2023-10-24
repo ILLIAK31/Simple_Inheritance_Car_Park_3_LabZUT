@@ -17,10 +17,8 @@ namespace App3b_Illia_Karmazin_
         {
             if (!Engine && !Electric_Engine)
             {
-                Console.WriteLine("Start the car(Engine)\n");
-                Engine = true;
-                Console.WriteLine("Start the car(Electric Engine)\n");
-                Electric_Engine = true;
+                Console.WriteLine("Start the car(Engine)\nStart the car(Electric Engine)\n");
+                Engine = Electric_Engine = true;
             }
             else
                 Console.WriteLine("The car is already started\n");
@@ -37,7 +35,7 @@ namespace App3b_Illia_Karmazin_
                 if (Tank)
                 {
                     Console.WriteLine("I'm driving on petrol \n");
-                    Tank = !Tank;
+                    Tank = false;
                 }
                 else if (Battery)
                 {
@@ -53,9 +51,8 @@ namespace App3b_Illia_Karmazin_
         public void Refuel()
         {
             Console.WriteLine(Tank ? "Car already refueled petrol\n" : "Refuels petrol\n");
-            Tank = true;
             Console.WriteLine(Battery ? "Car already refueled electricity\n" : "Refuels electricity\n");
-            Battery = true;
+            Tank = Battery = true;
         }
     }
 }
