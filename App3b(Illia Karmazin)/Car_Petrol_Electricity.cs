@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App3b_Illia_Karmazin_
 {
-    internal class Car_Petrol_Electricity : ICar , ICar_Petrol , ICar_Electricity
+    internal class Car_Petrol_Electricity : ICar, ICar_Petrol, ICar_Electricity
     {
         public bool Engine { get; set; } = false;
         public bool Electric_Engine { get; set; } = false;
@@ -53,6 +53,26 @@ namespace App3b_Illia_Karmazin_
             Console.WriteLine(Tank ? "Car already refueled petrol\n" : "Refuels petrol\n");
             Console.WriteLine(Battery ? "Car already refueled electricity\n" : "Refuels electricity\n");
             Tank = Battery = true;
+        }
+        void ICar_Petrol.Refuel()
+        {
+            Console.WriteLine(Tank ? "Car already refueled petrol\n" : "Refuels petrol\n");
+            Tank = true;
+        }
+        void ICar_Electricity.Refuel()
+        {
+            Console.WriteLine(Battery ? "Car already refueled electricity\n" : "Refuels electricity\n");
+            Battery = true;
+        }
+        void ICar_Petrol.Start()
+        {
+            Console.WriteLine(Engine ? "The car is already started\n" : "Start car(Engine)\n");
+            Engine = true;
+        }
+        void ICar_Electricity.Start()
+        {
+            Console.WriteLine(Electric_Engine ? "The car is already started\n" : "Start the car(Electric Engine)\n");
+            Electric_Engine = true;
         }
     }
 }

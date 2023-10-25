@@ -10,5 +10,8 @@ namespace App3b_Illia_Karmazin_
     {
         bool Electric_Engine { get; set; }
         bool Battery { get; set; }
+        new void Refuel();
+        new void Start();
     }
 }
+

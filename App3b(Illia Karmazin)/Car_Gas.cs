@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App3b_Illia_Karmazin_
 {
-    internal class Car_Gas : ICar , ICar_Gas
+    internal class Car_Gas : ICar, ICar_Gas
     {
         public bool Engine { get; set; } = false;
         public bool Cylinder { get; set; } = false;

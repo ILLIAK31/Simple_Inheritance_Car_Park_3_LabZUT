@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace App3b_Illia_Karmazin_
 {
-    internal class Car_Petrol_Gas : ICar , ICar_Petrol , ICar_Gas
+    internal class Car_Petrol_Gas : ICar, ICar_Petrol, ICar_Gas
     {
         public bool Engine { get; set; } = false;
         public bool Tank { get; set; } = false;
         public bool Cylinder { get; set; } = false;
         public void Start()
         {
-            Console.WriteLine(Engine? "The car is already started\n" : "Start the car(Engine)\n");
+            Console.WriteLine(Engine ? "The car is already started\n" : "Start the car(Engine)\n");
             Engine = true;
         }
         public void Turn_Off()
@@ -28,7 +28,7 @@ namespace App3b_Illia_Karmazin_
                 if (Tank)
                 {
                     Console.WriteLine("I'm driving on petrol \n");
-                    Tank = false ;
+                    Tank = false;
                 }
                 else if (Cylinder)
                 {
@@ -46,6 +46,26 @@ namespace App3b_Illia_Karmazin_
             Console.WriteLine(Tank ? "Car already refueled petrol\n" : "Refuels petrol\n");
             Console.WriteLine(Cylinder ? "Car already refueled gas\n" : "Refuels gas\n");
             Tank = Cylinder = true;
+        }
+        void ICar_Petrol.Refuel()
+        {
+            Console.WriteLine(Tank ? "Car already refueled petrol\n" : "Refuels petrol\n");
+            Tank = true;
+        }
+        void ICar_Gas.Refuel()
+        {
+            Console.WriteLine(Cylinder ? "Car already refueled gas\n" : "Refuels gas\n");
+            Cylinder = true;
+        }
+        void ICar_Petrol.Start()
+        {
+            Console.WriteLine(Engine ? "The car is already started\n" : "Start car(Engine)\n");
+            Engine = true;
+        }
+        void ICar_Gas.Start()
+        {
+            Console.WriteLine(Engine ? "The car is already started\n" : "Start the car(Engine)\n");
+            Engine = true;
         }
     }
 }

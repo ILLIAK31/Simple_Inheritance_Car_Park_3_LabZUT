@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App3b_Illia_Karmazin_
 {
-    internal class Car_Petrol : ICar , ICar_Petrol
+    internal class Car_Petrol : ICar, ICar_Petrol
     {
         public bool Engine { get; set; } = false;
         public bool Tank { get; set; } = false;
@@ -21,7 +21,7 @@ namespace App3b_Illia_Karmazin_
             Engine = false;
         }
         public void Drive()
-        {   
+        {
             if (Engine)
             {
                 Console.WriteLine(Tank ? "I'm driving on petrol \n" : "None petrol refuel\n");

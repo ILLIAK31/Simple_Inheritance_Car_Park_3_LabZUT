@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App3b_Illia_Karmazin_
 {
-    internal class Car_Electricity : ICar , ICar_Electricity
+    internal class Car_Electricity : ICar, ICar_Electricity
     {
         public bool Electric_Engine { get; set; } = false;
         public bool Battery { get; set; } = false;
